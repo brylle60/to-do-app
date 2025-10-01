@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List App</title>
+    <title>Todo List</title>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     {{-- <link rel="stylesheet" href="to-do-app/resources/views/layouts/styles.css"> --}}
     <style>
@@ -119,7 +119,7 @@
      <div class="main-container">
         <div class="text-center mb-4">
             <h1 class="text-white display-4 fw-bold">
-                <i class="fas fa-clipboard-list"></i> Todo App
+                <i class="fas fa-clipboard-list"></i> Todo List
             </h1>
             <p class="text-white-50">Manage your tasks efficiently</p>
         </div>

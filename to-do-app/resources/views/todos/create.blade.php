@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Create Todo')
+@section('title', 'Create Todo list')
 
 @section('content')
 <div class="card">
@@ -48,4 +48,21 @@
         </form>
     </div>
 </div>
+{{-- <script>
+    // Client-side form validation
+    (function () {
+        'use strict'
+        const forms = document.querySelectorAll('.needs-validation')
+        
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+                form.classList.add('was-validated')
+            }, false)
+        })
+    })()
+</script> --}}
 @endsection

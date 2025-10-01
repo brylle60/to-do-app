@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'All Todos')
+@section('title', 'All Todo lists')
 
 @section('content')
 <div class="card">
