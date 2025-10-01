@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+Route::resource('todos', TodoController::class);
 Route::get('/', function () {
     return Inertia::render('welcome');
 })->name('home');
