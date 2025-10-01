@@ -11,7 +11,8 @@ class TodoController extends Controller
      */
     public function index()
     {
-        //
+        $todos = Todo::orderBy('created_at', 'desc') -> get();
+        return view('todos.index', compact('todos'));
     }
 
     /**
@@ -19,7 +20,7 @@ class TodoController extends Controller
      */
     public function create()
     {
-        //
+    return view('todos.create');
     }
 
     /**
@@ -27,7 +28,7 @@ class TodoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
