@@ -58,16 +58,37 @@ class TodoController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Todo $todo)
     {
-        
+        $validated=$request->validate([
+            'title '=>'required|max:255',
+            'decription'=> 'nullable',
+            'completed'=>'bollean',
+
+        ]);
+
+        $todo->update($validated);
+        return redirect()->route('todos.index')
+        -> with ('success', 'Todo updated successfully.');
+
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Todo $todo)
     {
-        //
+        $todo->delete();
+        return redirect()->route (todos.index)
+        -> with('success', 'Todo deleted successfully.');
+    }
+
+    public function toggle(Todo $todo){
+        $todo->update([
+            'completed'=> !$todo->copleted
+        ]);
+
+        return redirect()-route('todos.index')
+        -> with ('success', 'Todo status updated.');
     }
 }
