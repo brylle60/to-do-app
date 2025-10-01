@@ -87,7 +87,7 @@ class TodoController extends Controller
             'completed'=> !$todo->copleted
         ]);
 
-        return redirect()-route('todos.index')
+        return redirect()->route('todos.index')
         -> with ('success', 'Todo status updated.');
     }
 }
