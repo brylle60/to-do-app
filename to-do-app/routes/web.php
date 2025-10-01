@@ -5,8 +5,8 @@ use Inertia\Inertia;
 
 Route::resource('todos', TodoController::class);
 Route::get('/', function () {
-    return Inertia::render('welcome');
-})->name('home');
+    return redirect()->route('todos.index');
+});
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {
